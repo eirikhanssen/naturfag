@@ -1,0 +1,93 @@
+/*naturfag.css*/
+
+.audio_and_text {display: none;}
+body.primary_lang_no .audio_and_text.no,
+body.primary_lang_ar .audio_and_text.ar,
+body.primary_lang_so .audio_and_text.so,
+body.primary_lang_ti .audio_and_text.ti {
+	display: block;
+}
+
+/* language selection */
+
+#lang_select:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#lang_select fieldset {
+	font-family: Arial, sans-serif;
+	font-size: .95em;
+	display: inline-block;
+	border-radius: .5em;
+	max-width: 45%;
+	text-align: center;
+}
+
+@media screen and (max-width: 40em) {
+	#lang_select fieldset {
+		max-width: 40%;
+		margin: 0;
+	}
+}
+
+#lang_select #primary_language {
+	float: left;
+}
+
+#lang_select #secondary_language {
+	float: right;
+}
+
+#lang_select label {
+	position: relative;
+	float: left;
+	padding: .5em;
+	padding-left: 2em;
+	padding-right: .65em;
+	height: 3.5em;
+	background: white;
+	border: 1px solid #909090;
+	border-radius: .5em;
+	margin: .25em;
+	display: inline-block;
+}
+
+#lang_select label:hover {
+	background: #324d89;
+	border-color: #7b7b7b;
+    color: white;
+}
+
+#lang_select label.single {
+	line-height: 2em;
+}
+
+#lang_select label input {
+	position: absolute;
+	left: 0.3em;
+	top: 0;
+	bottom: 0;
+	width: 1.5em;
+	height: 1.5em;
+	margin: auto;
+}
+
+#lang_select label span {
+	display: block
+}
+
+.rtl {
+	text-align: right;
+}
+
+#lang_select label.disabled {
+	color: gray;
+	border-color: gray;
+	opacity: .5;
+}
+
+#lang_select label.selected {
+	/*background-color: #ffffd1;*/
+}
