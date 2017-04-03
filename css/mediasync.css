@@ -73,6 +73,7 @@ article.audio_and_text .cues {
     position: relative;
     padding: 0;
     margin: 1em;
+    padding-right: 0.5rem;
 }
 
 .key {
@@ -126,7 +127,7 @@ article {
     background-color: rgb(237, 237, 237);
     left: 40%;
     border-radius: .25em;
-    width: 45%;
+    width: 44%;
     /*transform: translate(0%, -50%);*/
     padding: 1em;
     box-sizing: border-box;

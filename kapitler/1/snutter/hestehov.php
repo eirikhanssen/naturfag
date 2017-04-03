@@ -1,6 +1,6 @@
 <?php
 include '../../../inc/functions.php';
-$title = "Hestehov";
+$title = "Snutter - Hestehov";
 $depth = 3;
 $h1 = $title;
 $pageClass = "snutter kap-1";
@@ -14,9 +14,15 @@ $pageClass = "snutter kap-1";
 
     		<div class="col-xs-10">
     		<!-- content begin -->
-   
+   <ul class="thumblinks">
+        <li><a href="hestehov.php"><img src="<?php theRoot($depth); ?>media/img/NAT8599_hestehov_m_iskrystaller_eirikhanssen.jpg" alt=""/><span>Hestehov</span></a></li>
+        <li><a href="krokus.php"><img src="<?php theRoot($depth); ?>media/img/NAT8841_krokus_bla_naerbilde_eirik.jpg" alt=""><span>Krokus</span></a></li>
+        <li><a href="bokfink.php"><img src="<?php theRoot($depth); ?>media/img/639px-Chaffinch_RWD2.jpg" alt=""><span>Bokfink</span></a></li>
+        <li><a href="selje.php"><img src="<?php theRoot($depth); ?>media/img/NAT8667_to_gåsunger.jpg" alt="gåsunger"><span>Selje</span></a></li>
+      </ul>
+
 			<main class="snutt">
-	
+	<h2>Hestehov</h2>
 	<figure>
   <img src="<?php theRoot($depth); ?>media/img/NAT8607_hestehov_2_rim_eirik.jpg" alt="to hestehov dekket med rim" />
   <figcaption>
@@ -38,15 +44,14 @@ Kanskje mens det er snø?
 <figure>
 <img src="<?php theRoot($depth); ?>media/img/flora-003-hestehov.jpg" alt="hestehov" />
   <figcaption>
-  <small>Illustrasjon: Svetlana Voronkova</a></small>
+  <small>Illustrasjon: Svetlana Voronkova</small>
   <p>Store og små hesteov med knopper.</p>
 </figcaption>
 </figure>
 
 <figure>
-<iframe id="ytplayer" type="text/html" width="854" height="480"
-  src="https://www.youtube.com/embed/TfAS3i1ptEQ?autoplay=0&origin=flerspråklignaturfag.no" allowfullscreen="allowfullscreen"
-  frameborder="0"></iframe>
+<iframe id="ytplayer" width="854" height="480"
+  src="https://www.youtube.com/embed/TfAS3i1ptEQ?autoplay=0&origin=flerspråklignaturfag.no" allowfullscreen="allowfullscreen"></iframe>
 
   <figcaption>
   	<p>Her er en film om humler og bier på hestehov.</p>

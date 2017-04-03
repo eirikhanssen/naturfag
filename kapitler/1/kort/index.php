@@ -1,6 +1,6 @@
 <?php
 include '../../../inc/functions.php';
-$title = "1 - Det kommer et romskip (kort tekst)";
+$title = "Kapittel 1 - Det kommer et romskip (kort tekst)";
 $depth = 3;
 $h1 = $title;
 $pageClass = "kort kap-1";

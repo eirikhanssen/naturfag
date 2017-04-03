@@ -19,7 +19,7 @@ $pageClass = "snutter kap-1";
 				<li><a href="hestehov.php"><img src="<?php theRoot($depth); ?>media/img/NAT8599_hestehov_m_iskrystaller_eirikhanssen.jpg" alt=""/><span>Hestehov</span></a></li>
 				<li><a href="krokus.php"><img src="<?php theRoot($depth); ?>media/img/NAT8841_krokus_bla_naerbilde_eirik.jpg" alt=""><span>Krokus</span></a></li>
 				<li><a href="bokfink.php"><img src="<?php theRoot($depth); ?>media/img/639px-Chaffinch_RWD2.jpg" alt=""><span>Bokfink</span></a></li>
-				<li><!--<a href="selje.php">--><a href="#"><img src="<?php theRoot($depth); ?>media/img/NAT8667_to_gåsunger.jpg" alt=""><span>Selje</span></a></li>
+				<li><a href="selje.php"><img src="<?php theRoot($depth); ?>media/img/NAT8667_to_gåsunger.jpg" alt="gåsunger"><span>Selje</span></a></li>
 			</ul>
 
 			<!-- content end -->
