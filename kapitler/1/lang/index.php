@@ -7,20 +7,21 @@ $pageClass = "lang kap-1";
 ?>
 <?php theHeader($depth, $title, $h1, $pageClass); ?>
 <div class="row">
-
-	<div class="col-xd-8 col-xs-12">
-
+    <div class="col-xd-10 col-xs-10">
     <?php langSelect(); ?>
+
+    <div class="row">
+    <div class="col-xs-6 col-xd-6">
 
 <article lang="no" class="audio_and_text no" data-lang="no">
 <audio id="audio-no" class="mejs__player">
-	<source src="<?php theRoot($depth); ?>media/audio/ogg_64k/NO_01L.ogg" type="audio/ogg"/>
+    <source src="<?php theRoot($depth); ?>media/audio/ogg_64k/NO_01L.ogg" type="audio/ogg"/>
     <source src="<?php theRoot($depth); ?>media/audio/mp3_64k/NO_01L.mp3" type="audio/mp3"/>
-    <track kind="captions" src="<?php theRoot($depth); ?>media/vttno01l.vtt" default="default" srclang="no" label="Norsk (Captions)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttso01l.vtt" srclang="so" label="Somali (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttno01l.vtt" srclang="no" label="Norsk (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
+    <track kind="captions" src="<?php theRoot($depth); ?>media/vtt/no01l.vtt" default="default" srclang="no" label="Norsk (Captions)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/so01l.vtt" srclang="so" label="Somali (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/no01l.vtt" srclang="no" label="Norsk (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
 </audio>
 
 <div class="cues">
@@ -120,6 +121,7 @@ $pageClass = "lang kap-1";
 <p><span data-begin="00:10:50.170" data-end="00:10:52.930">– Nå flyr dyret, sa Jenny.</span> <span data-begin="00:10:52.930" data-end="00:10:55.750">Dyret så tungt ut.</span> <span data-begin="00:10:55.750" data-end="00:10:57.380">Det fløy videre.</span> <span data-begin="00:10:57.380" data-end="00:10:58.870">Ikke langt.</span> <span data-begin="00:10:58.870" data-end="00:11:01.480">Til treet ved siden av.</span> <span data-begin="00:11:01.480" data-end="00:11:03.920">Der var det grønne blomster.</span> <span data-begin="00:11:03.920" data-end="00:11:06.560">Mange små grønne blomster</span> <span data-begin="00:11:06.560" data-end="00:11:08.440">sto tett i tett.</span> <span data-begin="00:11:08.440" data-end="00:11:11.650">– Hunn–blomster, sa Hen.</span> <span data-begin="00:11:11.650" data-end="00:11:13.410">– Eller jenter,</span> <span data-begin="00:11:13.410" data-end="00:11:15.880">om du skjønner det bedre.</span> <span data-begin="00:11:15.880" data-end="00:11:19.160">Hen sto ved siden av henne.</span> <span data-begin="00:11:19.160" data-end="00:11:22.210">Hvordan kunne Hen se alt,</span> <span data-begin="00:11:22.210" data-end="00:11:26.050">enda ikke han hadde sånne briller på?</span></p>
 </div>
 
+<div class="key" data-key="18">
 <p><span data-begin="00:11:26.050" data-end="00:11:28.270">Dyret landa.</span> <span data-begin="00:11:28.270" data-end="00:11:31.570">Jenny så at det gule støvet</span> <span data-begin="00:11:31.570" data-end="00:11:33.300">fra pelsen til dyret</span> <span data-begin="00:11:33.300" data-end="00:11:36.460">ble klint på de grønne blomstene.</span></p>
 <p><span data-begin="00:11:36.460" data-end="00:11:41.600">– Blomsterstøv fra hann–blomst til hunn–blomst,</span> <span data-begin="00:11:41.600" data-end="00:11:42.550">sa Hen.</span> <span data-begin="00:11:42.550" data-end="00:11:44.000">–Pollinering.</span> <span data-begin="00:11:44.000" data-end="00:11:46.280">Blir frø.</span></p>
 <p><span data-begin="00:11:46.280" data-end="00:11:48.130">Jenny så</span> <span data-begin="00:11:48.130" data-end="00:11:50.820">at det var mange grønne krukker</span> <span data-begin="00:11:50.820" data-end="00:11:52.900">mellom blomstene her også.</span> <span data-begin="00:11:52.900" data-end="00:11:56.740">Små krukker med dråper av saft.</span> <span data-begin="00:11:56.740" data-end="00:12:00.250">– Veldig mye saft i disse kulene,</span> <span data-begin="00:12:00.250" data-end="00:12:02.180">sa Jenny.</span></p>
@@ -154,13 +156,13 @@ $pageClass = "lang kap-1";
 
 <article lang="ar" class="audio_and_text ar" data-lang="ar">
 <audio id="audio-ar" class="mejs__player">
-	<source src="<?php theRoot($depth); ?>media/audio/ogg_64k/AR_01L.ogg" type="audio/ogg"/>
+    <source src="<?php theRoot($depth); ?>media/audio/ogg_64k/AR_01L.ogg" type="audio/ogg"/>
     <source src="<?php theRoot($depth); ?>media/audio/mp3_64k/AR_01L.mp3" type="audio/mp3"/>
-    <track kind="captions" src="<?php theRoot($depth); ?>media/vttar01l.vtt" default="default" srclang="ar" label="Arabisk (Captions)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttso01l.vtt" srclang="so" label="Somali (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttno01l.vtt" srclang="no" label="Norsk (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
+    <track kind="captions" src="<?php theRoot($depth); ?>media/vtt/ar01l.vtt" default="default" srclang="ar" label="Arabisk (Captions)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/so01l.vtt" srclang="so" label="Somali (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/no01l.vtt" srclang="no" label="Norsk (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
 </audio>
 
 <div class="cues">
@@ -307,13 +309,13 @@ $pageClass = "lang kap-1";
 
 <article lang="so" class="audio_and_text so" data-lang="so">
 <audio id="audio-so" class="mejs__player">
-	<source src="<?php theRoot($depth); ?>media/audio/ogg_64k/SO_01L.ogg" type="audio/ogg"/>
+    <source src="<?php theRoot($depth); ?>media/audio/ogg_64k/SO_01L.ogg" type="audio/ogg"/>
     <source src="<?php theRoot($depth); ?>media/audio/mp3_64k/SO_01L.mp3" type="audio/mp3"/>
-    <track kind="captions" src="<?php theRoot($depth); ?>media/vttso01l.vtt" default="default" srclang="so" label="Somali (Captions)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttso01l.vtt" srclang="so" label="Somali (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttno01l.vtt" srclang="no" label="Norsk (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
+    <track kind="captions" src="<?php theRoot($depth); ?>media/vtt/so01l.vtt" default="default" srclang="so" label="Somali (Captions)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/so01l.vtt" srclang="so" label="Somali (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/no01l.vtt" srclang="no" label="Norsk (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
 </audio>
 
 <div class="cues">
@@ -466,13 +468,13 @@ $pageClass = "lang kap-1";
 
 <article lang="ti" class="audio_and_text ti" data-lang="ti">
 <audio id="audio-ti" class="mejs__player">
-	<source src="<?php theRoot($depth); ?>media/audio/ogg_64k/TI_01L.ogg" type="audio/ogg"/>
+    <source src="<?php theRoot($depth); ?>media/audio/ogg_64k/TI_01L.ogg" type="audio/ogg"/>
     <source src="<?php theRoot($depth); ?>media/audio/mp3_64k/TI_01L.mp3" type="audio/mp3"/>
-    <track kind="captions" src="<?php theRoot($depth); ?>media/vttti01l.vtt" default="default" srclang="ti" label="Tigrinja (Captions)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttso01l.vtt" srclang="so" label="Somali (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttno01l.vtt" srclang="no" label="Norsk (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
-    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vttar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
+    <track kind="captions" src="<?php theRoot($depth); ?>media/vtt/ti01l.vtt" default="default" srclang="ti" label="Tigrinja (Captions)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/so01l.vtt" srclang="so" label="Somali (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/no01l.vtt" srclang="no" label="Norsk (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ti01l.vtt" srclang="ti" label="Tigrinja (synk)"/>
+    <track kind="subtitles" src="<?php theRoot($depth); ?>media/vtt/ar01l.vtt" srclang="ar" label="Arabisk (synk)"/>
 </audio>
 
 <div class="cues">
@@ -598,13 +600,21 @@ $pageClass = "lang kap-1";
 
 </div><!-- .cues -->
 </article>
+</div><!-- .col-xd-6.col-xs-6 -->
 
+</div><!-- div.row -->
 
-	</div><!-- .col-xd-8.col-xs-12 -->
+    </div><!-- .col-xd-8.col-xs-8 -->
 
-	<div class="col-xd-4 col-xs-12">
-		<?php theChapterMenu(0); ?>
-	</div><!-- .col-xd-4  -->
-
+    <div class="col-xd-2 col-xs-2">
+        <?php theChapterMenu(0); ?>
+    </div><!-- .col-xd-4  -->
 </div><!-- .row -->
+
+
+<div class="translation-container">
+<?php echo secondaryLangControls2(); ?>
+    <div id="translation"></div>
+
+</div>
 <?php theFooter($depth); ?>
