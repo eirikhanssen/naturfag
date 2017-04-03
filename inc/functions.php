@@ -63,11 +63,9 @@ EOF;
 	$output .= $stylesheets . $headerScripts;
 	$output .= '</head>' . "\n" . '<body class="' . $pageClass . '">';
     $heading = <<<EOF
-\n<div class="row">
 <header>
 <h1>$title</h1>
 </header>
-</div>
 EOF;
 	$output .= $heading;
 	return $output;
@@ -130,7 +128,7 @@ $output = <<<EOF
 			<fieldset id="secondary_language">
 				<legend>Velg støttespråk</legend>
 				<label class="single" for="secondary_lang_no">Norsk
-					<input id="secondary_lang_no" type="radio" name="secondary_language" checked="checked">
+					<input id="secondary_lang_no" type="radio" name="secondary_language">
 				</label>
 				<label for="secondary_lang_ar"><span lang="ar" class="rtl">العربية</span><span lang="no">Arabisk</span>
 					<input id="secondary_lang_ar" type="radio" name="secondary_language">
@@ -142,11 +140,25 @@ $output = <<<EOF
 					<input id="secondary_lang_ti" type="radio" name="secondary_language">
 				</label>
 				<label for="secondary_lang_none"><span>Ikke</span><span>valgt</span>
-					<input id="secondary_lang_none" type="radio" name="secondary_language">
+					<input id="secondary_lang_none" type="radio" name="secondary_language" checked="checked">
 				</label>
 			</fieldset>
 			</form>
 		</section>
 EOF;
 echo $output;
+}
+
+function secondaryLangControls2() {
+	$output = <<<EOF
+<div class="secondaryLangControls2">
+<h2>Støttespråk</h2>
+<button class="langMirrorBtn" data-input="secondary_lang_no"><span>&nbsp;</span><span>Norsk</span></button>
+<button class="langMirrorBtn" data-input="secondary_lang_ar"><span lang="ar" class="rtl">العربية</span><span lang="no">Arabisk</span></button>
+<button class="langMirrorBtn" data-input="secondary_lang_so"><span lang="so">SOOMAALI</span><span lang="no">Somali</span></button>
+<button class="langMirrorBtn" data-input="secondary_lang_ti"><span lang="ti">ትግርኛ</span><span lang="no">Tigrinja</span></button>
+<button class="langMirrorBtn" data-input="secondary_lang_none"><span>&nbsp;</span><span>Lukk</span> </button>
+</div><!-- .secondaryLangControls2 -->
+EOF;
+return $output;
 }

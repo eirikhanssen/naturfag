@@ -1,6 +1,6 @@
 <?php
 include '../../../inc/functions.php';
-$title = "Kapittel 1 - Det kommer et romskip - kort tekst";
+$title = "1 - Det kommer et romskip (kort tekst)";
 $depth = 3;
 $h1 = $title;
 $pageClass = "kort kap-1";
@@ -688,7 +688,7 @@ $pageClass = "kort kap-1";
 
 
 <div class="translation-container">
-
+<?php echo secondaryLangControls2(); ?>
 	<div id="translation"></div>
 
 </div>

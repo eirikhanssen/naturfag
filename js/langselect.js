@@ -29,5 +29,10 @@ $( document ).ready(function() {
 			
 			$('body').addClass(input_id);
 		});
+
+		$('.langMirrorBtn').on("click", function(){
+			$('#' + $(this).attr('data-input')).click();
+			//console.log($(this));
+		});
 	}
 });

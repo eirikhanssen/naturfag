@@ -119,28 +119,34 @@ article {
 
 .translation-container {
     position: fixed;
-    top: 4em;
-    top: 4rem;
+    top: 1em;
+    top: 8rem;
     bottom: 4em;
     bottom: 5rem;
-    background-color: rgba(72, 72, 72, 0.7);
+    background-color: rgb(237, 237, 237);
     left: 40%;
-    
+    border-radius: .25em;
     width: 45%;
     /*transform: translate(0%, -50%);*/
     padding: 1em;
     box-sizing: border-box;
 }
 
+.translation-container button span {display: block;}
+.secondaryLangControls2 {text-align: center;}
+.translation-container button {margin: 0; box-sizing: border-box; padding: .5rem 1rem; min-width: 17%; display: inline-block;}
+.translation-container button+button {margin-left: .5rem;}
 #translation {
     font-size: 2em;
     font-size: 2rem;
     padding: 1rem;
+    margin-top: 2em;
+    margin-top: 2rem;
     background: #ffffd1;
     box-sizing: border-box;
     border: 1px dashed gray;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
 
 }
 
-.active-cue {background-color: yellow; text-decoration: underline;}
+.active-cue {background-color: yellow;}
