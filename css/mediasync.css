@@ -146,7 +146,14 @@ article {
     box-sizing: border-box;
     border: 1px dashed gray;
     border-radius: 0.25em;
+}
 
+.kap-1 .translation-container {
+    background-color: dodgerblue;
+    background-image: url('../media/interactive/oversiktsbilde-kapittel01.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .active-cue {background-color: yellow;}
