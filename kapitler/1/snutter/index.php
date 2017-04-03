@@ -1,6 +1,6 @@
 <?php
 include '../../../inc/functions.php';
-$title = "1 - Snutter";
+$title = "Snutter";
 $depth = 3;
 $h1 = $title;
 $pageClass = "snutter kap-1";
