@@ -96,6 +96,7 @@ function getChapterMenu($depth) {
 <ul class="nav nav-pills nav-stacked">
 <li role="presentation" class="menu-kort"><a href="../kort">kort</a></li>
 <li role="presentation" class="menu-lang"><a href="../lang">lang</a></li>
+<li role="presentation" class="menu-ord"><a href="../ord">ord</a></li>
 <li role="presentation" class="menu-kviss"><a href="../kviss">kviss</a></li>
 <li role="presentation" class="menu-film"><a href="../film">film</a></li>
 <li role="presentation" class="menu-snutter"><a href="../snutter">snutter</a></li>
