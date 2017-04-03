@@ -129,7 +129,7 @@ $output = <<<EOF
 			<fieldset id="secondary_language">
 				<legend>Velg støttespråk</legend>
 				<label class="single" for="secondary_lang_no">Norsk
-					<input id="secondary_lang_no" type="radio" name="secondary_language">
+					<input id="secondary_lang_no" type="radio" name="secondary_language" checked="checked">
 				</label>
 				<label for="secondary_lang_ar"><span lang="ar" class="rtl">العربية</span><span lang="no">Arabisk</span>
 					<input id="secondary_lang_ar" type="radio" name="secondary_language">
@@ -141,7 +141,7 @@ $output = <<<EOF
 					<input id="secondary_lang_ti" type="radio" name="secondary_language">
 				</label>
 				<label for="secondary_lang_none"><span>Ikke</span><span>valgt</span>
-					<input id="secondary_lang_none" type="radio" name="secondary_language" checked="checked">
+					<input id="secondary_lang_none" type="radio" name="secondary_language">
 				</label>
 			</fieldset>
 			</form>
