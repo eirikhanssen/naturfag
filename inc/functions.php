@@ -18,6 +18,7 @@ function theRoot($depth) {
 
 function getHeaderScripts($depth) {
 	$output = "\n<!-- header scripts -->\n";
+	$output .= addScript($depth, 'libs/jquery-3.1.1.min.js');
 	return $output;
 }
 
@@ -33,7 +34,6 @@ function addStylesheet($depth, $relpath) {
 
 function getFooterScripts($depth) {
 	$output = "<!-- footer scripts -->";
-	$output .= addScript($depth, 'libs/jquery-3.1.1.min.js');
 	$output .= addScript($depth, 'libs/bootstrap-3.3.7/js/bootstrap.min.js');
 	$output .= addScript($depth, 'libs/mediaelement/build/mediaelement-and-player.min.js');
 	$output .= addScript($depth, 'js/mediasync.js');
