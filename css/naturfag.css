@@ -267,3 +267,45 @@ margin: .5em;
    .snutter h2 {margin-left: 2em; margin-left: 2rem; font-weight: bold;}
 
 .kviss section {min-height: 33em;}
+
+.langselectContainer {
+    font-size: 0.8em;
+}
+
+.langselectContainer fieldset {
+    position: relative;
+    left: 12rem;
+}
+
+.langselectContainer span {
+    display: block;
+}
+
+.langselectContainer fieldset {
+    position: relative;
+    display: inline-block;
+}
+
+.langselectContainer legend {
+    font-size: 1.2em;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    right: 100%;
+    text-align: right;
+    padding-right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.langselectContainer button {
+    line-height: 1.2rem;
+    border-radius: .5rem;
+    border: none;
+    padding: .5rem 1rem;
+    border: 1px solid gray;
+}
+
+.langselectContainer button span.middle { position: relative; top: -0.5em;}
+
+.langselectContainer button:hover {color: white; background-color:red; }

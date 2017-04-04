@@ -150,6 +150,33 @@ EOF;
 echo $output;
 }
 
+function langSelect2Primary() {
+$output = <<<EOF
+<fieldset id="lang_select_1">
+	<legend>Lyd/Tekst:</legend>
+	<button data-lang="no"><span>&nbsp;</span><span class="middle" lang="no">Norsk</span></button>
+	<button data-lang="ar"><span lang="ar" class="rtl">العربية</span><span lang="no">Arabisk</span></button>
+	<button data-lang="so"><span lang="so"><span lang="so">SOOMAALI</span><span lang="no">Somali</span></button>
+	<button data-lang="ti"><span lang="ti">ትግርኛ</span><span lang="no">Tigrinja</span></button>
+</fieldset>
+EOF;
+echo $output;
+}
+
+function langSelect2Secondary() {
+$output = <<<EOF
+<fieldset id="lang_select_2">
+	<legend>Tekst:</legend>
+	<button data-lang="no"><span>&nbsp;</span><span class="middle" lang="no">Norsk</span></button>
+	<button data-lang="ar"><span lang="ar" class="rtl">العربية</span><span lang="no">Arabisk</span></button>
+	<button data-lang="so"><span lang="so"><span lang="so">SOOMAALI</span><span lang="no">Somali</span></button>
+	<button data-lang="ti"><span lang="ti">ትግርኛ</span><span lang="no">Tigrinja</span></button>
+	<button data-lang="none"><span lang="no">Skjul</span><span lang="no">tekst</span></button>
+</fieldset>
+EOF;
+echo $output;
+}
+
 function secondaryLangControls2() {
 	$output = <<<EOF
 <div class="secondaryLangControls2">
