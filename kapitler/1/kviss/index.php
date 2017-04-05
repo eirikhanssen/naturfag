@@ -16,8 +16,8 @@ $pageClass = "snutter kap-1";
     		<!-- content begin -->
    
 			<ul class="thumblinks">
-				<li><a href="natur.php"><img src="<?php theRoot($depth); ?>media/svg/q.svg"><span>Natur-kviss</span></a></li>
-				<li><a href="fortelling.php"><img src="<?php theRoot($depth); ?>media/svg/q.svg"><span>Fortelling-kviss</span></a></li>
+				<li><a href="natur.php"><img alt="natur-kviss" src="<?php theRoot($depth); ?>media/svg/q.svg"><span>Natur-kviss</span></a></li>
+				<li><a href="fortelling.php"><img alt="fortelling-kviss" src="<?php theRoot($depth); ?>media/svg/q.svg"><span>Fortelling-kviss</span></a></li>
 			</ul>
 
 			<!-- content end -->

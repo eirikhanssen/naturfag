@@ -29,7 +29,7 @@ $pageClass = "snutter kviss kap-1";
 		<fieldset id="kviss">
 			
 <section>
-	<img src="http://verdalsbilder.no/cpg1410/albums/userpics/10004/Innsekt_-_bie_paa_krokus_i_april.JPG"/>
+	<img alt="bie i en lilla krokus" src="http://verdalsbilder.no/cpg1410/albums/userpics/10004/Innsekt_-_bie_paa_krokus_i_april.JPG"/>
 	<p class="q"><strong>Se på bildet av krokus og humla. Hva er det gule støvet?</strong></p>
 	<label for="hva_er_gule_støvet_maling">Maling<input type="radio" id="hva_er_gule_støvet_maling" name="hva_er_gule_støvet"/></label>
 	<label for="hva_er_gule_støvet_mel">Mel<input type="radio" id="hva_er_gule_støvet_mel" name="hva_er_gule_støvet"/></label>
@@ -37,7 +37,7 @@ $pageClass = "snutter kviss kap-1";
 </section>
 
 <section>
-	<img src="<?php theRoot($depth); ?>media/svg/q.svg"/>
+	<img alt="hva er en krokus?" src="<?php theRoot($depth); ?>media/svg/q.svg"/>
 	<p class="q"><strong>Hva er krokus?</strong></p>
 	<label for="hva_er_krokus_lus">Lus<input type="radio" id="hva_er_krokus_lus" name="hva_er_krokus"/></label>
 	<label for="hva_er_krokus_krokete_mann">Krokete mann<input type="radio" id="hva_er_krokus_krokete_mann" name="hva_er_krokus"/></label>
@@ -45,7 +45,7 @@ $pageClass = "snutter kviss kap-1";
 </section>
 
 <section>
-	<img src="<?php theRoot($depth); ?>media/svg/q.svg"/>
+	<img alt="hva er pollen?" src="<?php theRoot($depth); ?>media/svg/q.svg"/>
 	<p class="q"><strong>Hva er pollen?</strong></p>
 	<label for="hva_er_pollen_støv">Støv fra hannblomster<input type="radio" id="hva_er_pollen_støv" name="hva_er_pollen" data-ok="ok"/></label>
 	<label for="hva_er_pollen_politi">Politi<input type="radio" id="hva_er_pollen_politi" name="hva_er_pollen"/></label>
@@ -54,7 +54,7 @@ $pageClass = "snutter kviss kap-1";
 
 
 <section>
-	<img src="<?php theRoot($depth); ?>media/svg/q.svg"/>
+	<img alt="hva er hestehov?" src="<?php theRoot($depth); ?>media/svg/q.svg"/>
 	<p class="q"><strong>Hva er en gul hestehov?</strong></p>
 	<label for="hva_er_en_gul_hestehov_hest">En hest<input type="radio" id="hva_er_en_gul_hestehov_hest" name="hva_er_en_gul_hestehov"/></label>
 	<label for="hva_er_en_gul_hestehov_hode">Et hode<input type="radio" id="hva_er_en_gul_hestehov_hode" name="hva_er_en_gul_hestehov"/></label>
@@ -62,7 +62,7 @@ $pageClass = "snutter kviss kap-1";
 </section>
 
 <section>
-	<img src="<?php theRoot($depth); ?>media/svg/q.svg"/>
+	<img alt="hva liker humla som selja har?" src="<?php theRoot($depth); ?>media/svg/q.svg"/>
 	<p class="q"><strong>Selja har noe som humla liker. Hva er det?</strong></p>
 	<label for="humla_liker_hår">Pent hår<input type="radio" id="humla_liker_hår" name="humla_liker"/></label>
 	<label for="humla_liker_nektar_og_pollen">Nektar og pollen<input type="radio" id="humla_liker_nektar_og_pollen" name="humla_liker" data-ok="ok"/></label>
@@ -70,7 +70,7 @@ $pageClass = "snutter kviss kap-1";
 </section>
 
 <section>
-	<img src="<?php theRoot($depth); ?>media/svg/q.svg"/>
+	<img alt="hva er nektar?" src="<?php theRoot($depth); ?>media/svg/q.svg"/>
 	<p class="q"><strong>Hva er nektar?</strong></p>
 	<label for="hva_er_nektar_saft">Søt saft som humla spiser<input type="radio" id="hva_er_nektar_saft" name="hva_er_nektar" data-ok="ok"/></label>
 	<label for="hva_er_nektar_gutt">En gutt som nekter å spise is<input type="radio" id="hva_er_nektar_gutt" name="hva_er_nektar"/></label>
@@ -102,7 +102,7 @@ $pageClass = "snutter kviss kap-1";
 </section>
 
 <section>
-	<img src="<?php theRoot($depth); ?>media/img/NAT9114_selje_hunnblomst_kvist.jpg" alt="">
+	<img src="<?php theRoot($depth); ?>media/img/NAT9114_selje_hunnblomst_kvist.jpg" alt="en knopp med mange grønne bananliknende utstikkere som har bittesmå gule hjerter i tuppene">
 	<p class="q"><strong>Hva er dette</strong></p>
 	<label for="hunnblomst_hva_er_dette_grønne_bananer">Små grønne bananer<input type="radio" id="hunnblomst_hva_er_dette_grønne_bananer" name="hunnblomst_hva_er_dette"/></label>
 	<label for="hunnblomst_hva_er_dette_hunnblomst">Hunnblomstene til selja<input type="radio" id="hunnblomst_hva_er_dette_hunnblomst" name="hunnblomst_hva_er_dette" data-ok="ok"/></label>
