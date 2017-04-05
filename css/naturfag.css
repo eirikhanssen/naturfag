@@ -207,7 +207,7 @@ header h1 {margin:0; padding-top: .5em; padding-left: .5em; padding-bottom: .25e
 
 .snutter fieldset section {
     position:relative;
-width: 45%;
+width: 23%;
 float:left;
 
 min-width: 13em;
@@ -309,3 +309,13 @@ margin: .5em;
 .langselectContainer button span.middle { position: relative; top: -0.5em;}
 
 .langselectContainer button:hover {color: white; background-color:red; }
+
+#sjekk_kviss {display: block; margin: auto; font-size: 2em; margin-left: 1rem;}
+
+#resultat strong {font-size: 2em; 
+}
+#resultat strong span {text-shadow: 1px 1px 0px black;}
+.perfekt {color: green;}
+.bra {color: orange;}
+.ok {color: pink;}
+.oops {color: red;}
