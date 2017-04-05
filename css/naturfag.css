@@ -247,6 +247,8 @@ margin: .5em;
 	content: counter(section) ". ";
 }
 
+section p.q {margin-top: 1rem;}
+
 .snutter fieldset section img {
     /*position:absolute;
     width: 30%;
@@ -266,7 +268,7 @@ margin: .5em;
 
    .snutter h2 {margin-left: 2em; margin-left: 2rem; font-weight: bold;}
 
-.kviss section {min-height: 33em;}
+.kviss section {min-height: 30em;}
 
 .langselectContainer {
     font-size: 0.8em;

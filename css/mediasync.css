@@ -74,6 +74,7 @@ article.audio_and_text .cues {
     padding: 0;
     margin: 1em;
     padding-right: 0.5rem;
+    font-size: 2rem;
 }
 
 .key {
@@ -148,6 +149,7 @@ article {
     border: 1px dashed gray;
     border-radius: 0.25em;
 }
+
 
 .kap-1 .translation-container {
     background-color: dodgerblue;

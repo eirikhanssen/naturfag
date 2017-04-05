@@ -1,6 +1,6 @@
 <?php
 include '../../../inc/functions.php';
-$title = "Kviss om fortellinga";
+$title = "Fortelling-kviss";
 $depth = 3;
 $h1 = $title;
 $pageClass = "snutter kviss kap-1";
