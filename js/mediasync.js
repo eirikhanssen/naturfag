@@ -83,6 +83,8 @@ var getTranslatedSubtitle = function(player, lang) {
 	return getCurrentSubtitleFromTracks(player, 'subtitles', lang, getCurrentEntryIndexFromTracks(player));
 }
 
+
+
 function getCurrentCueId(player, lang) {
  	var tracks = player.tracks;
 
@@ -100,7 +102,44 @@ function getCurrentCueId(player, lang) {
  	}       	
 }
 
+
+
+
+function playKey(player, keyId) {
+	var paused = player.domNode.paused;
+}
+
+
+function playFromKey(player, lang, keyID) {
+	
+}
+
+function playKeyAndStop(player, lang, keyID) {
+
+}
+
+
+
+
+
+
+
+
+
 $( document ).ready(function() {
+	$('.key').on("click", function(){
+	var key = $(this).attr('data-key');
+	var primary_lang = $('body').attr('data-primary-lang');
+	var secondary_lang = $('body').attr('data-secondary-lang');
+	var lang;
+	if ($(this).parents('#translation')){
+		lang = secondary_lang;
+	} else {
+		lang = primary_lang;
+	}
+	console.log('lang: ' + lang + ' key: ' + key);
+});
+	
     $('article.audio_and_text').each(function(){
 
 		var lang = ($(this).attr('data-lang'));

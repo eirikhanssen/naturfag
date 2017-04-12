@@ -27,17 +27,38 @@ function addScript($depth, $relpath) {
 	return $output;
 }
 
+function addDeferScript($depth, $relpath) {
+	$output = "\n" . '<script defer src="' . getRoot($depth) . $relpath . '"></script>';
+	return $output;
+}
+
 function addStylesheet($depth, $relpath) {
 	$output = "\n" . '<link href="' . getRoot($depth) . $relpath . '" rel="stylesheet" type="text/css">';
 	return $output;
 }
 
 function getFooterScripts($depth) {
+	global $pageClass;
+//	echo "<!-- PageClass: " .  . "-->";
+
 	$output = "<!-- footer scripts -->";
-	$output .= addScript($depth, 'libs/bootstrap-3.3.7/js/bootstrap.min.js');
-	$output .= addScript($depth, 'libs/mediaelement/build/mediaelement-and-player.min.js');
-	$output .= addScript($depth, 'js/mediasync.js');
-	$output .= addScript($depth, 'js/langselect.js');
+	$output .= addDeferScript($depth, 'libs/bootstrap-3.3.7/js/bootstrap.min.js');
+	$output .= addDeferScript($depth, 'libs/svgxuse.min.js');
+	
+	if(preg_match('/audiosync/', $pageClass)){
+		// only add these scripts if the $pageClass contains "audiotext"
+		$output .= addDeferScript($depth, 'libs/mediaelement/build/mediaelement-and-player.min.js');
+		$output .= addDeferScript($depth, 'js/mediasync.js');
+		$output .= addDeferScript($depth, 'js/langselect.js');
+		
+	}
+	
+	else if(preg_match('/mediajs/', $pageClass)){
+		// only add these scripts if the $pageClass contains "mediajs"
+		$output .= addDeferScript($depth, 'libs/mediaelement/build/mediaelement-and-player.min.js');
+	}
+
+	
 	return $output;
 }
 
@@ -91,16 +112,47 @@ function theChapterMenu($depth) {
 }
 
 function getChapterMenu($depth) {
-	$depth=$depth || 0;
+	$depth=$depth;
+	$rootfolder = getRoot($depth);
 	$chaptermenu = <<<EOF
+<!-- rootfolder: {$rootfolder} -->
+<!-- depth: {$depth} -->
 <ul class="nav nav-pills nav-stacked">
-<li role="presentation" class="menu-kort"><a href="../kort">kort</a></li>
-<li role="presentation" class="menu-lang"><a href="../lang">lang</a></li>
-<li role="presentation" class="menu-ord"><a href="../ord">ord</a></li>
-<li role="presentation" class="menu-kviss"><a href="../kviss">kviss</a></li>
-<li role="presentation" class="menu-film"><a href="../film">film</a></li>
-<li role="presentation" class="menu-snutter"><a href="../snutter">snutter</a></li>
-<li role="presentation" class="menu-let-og-finn"><a href="../let-og-finn">Let og finn</a></li>
+
+<li role="presentation" class="menu-kort"><a href="../kort">
+	<svg class="icon icon-kort">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-kort"></use>
+	</svg><span class="link-desc">kort fortelling</a></span></li>
+
+<li role="presentation" class="menu-lang"><a href="../lang">
+	<svg class="icon icon-lang">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-lang"></use>
+	</svg><span class="link-desc">lang fortelling</span></a></li>
+
+<li role="presentation" class="menu-ord"><a href="../ord">
+	<svg class="icon icon-abc">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-abc"></use>
+	</svg><span class="link-desc">ord</span></a></li>
+
+<li role="presentation" class="menu-kviss"><a href="../kviss">
+	<svg class="icon icon-kviss">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-kviss"></use>
+	</svg><span class="link-desc">kviss</span></a></li>
+
+<li role="presentation" class="menu-film"><a href="../film">
+	<svg class="icon icon-film">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-film"></use>
+		</svg><span class="link-desc">film</span></a></li>
+
+<li role="presentation" class="menu-snutter"><a href="../snutter">
+	<svg class="icon icon-snutt">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-snutt"></use>
+	</svg><span class="link-desc">snutter</span></a></li>
+
+<li role="presentation" class="menu-let-og-finn"><a href="../let-og-finn">
+	<svg class="icon icon-finn">
+		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-finn"></use>
+	</svg><span class="link-desc">Let og finn</span></a></li>
 </ul>
 EOF;
 	return $chaptermenu;

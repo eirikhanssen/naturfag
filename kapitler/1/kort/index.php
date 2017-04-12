@@ -3,7 +3,7 @@ include '../../../inc/functions.php';
 $title = "Kapittel 1 - Det kommer et romskip (kort tekst)";
 $depth = 3;
 $h1 = $title;
-$pageClass = "kort kap-1";
+$pageClass = "audiosync kort kap-1";
 ?>
 <?php theHeader($depth, $title, $h1, $pageClass); ?>
 
@@ -682,7 +682,7 @@ $pageClass = "kort kap-1";
 	</div><!-- .col-xd-8.col-xs-8 -->
 
 	<div class="col-xd-2 col-xs-2">
-		<?php theChapterMenu(0); ?>
+		<?php theChapterMenu($depth); ?>
 	</div><!-- .col-xd-4  -->
 </div><!-- .row -->
 

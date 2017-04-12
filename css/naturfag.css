@@ -321,3 +321,46 @@ section p.q {margin-top: 1rem;}
 .bra {color: orange;}
 .ok {color: pink;}
 .oops {color: red;}
+
+/* icons */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* new menu css */
+ul.nav li {
+    position: relative;
+}
+
+ul.nav li svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    margin: 0;
+}
+
+/* test css */
+ul.nav li {border: none;}
+ul.nav li a {border: none; padding: 16px; padding-left: 52px; }
+li svg {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid gray;
+    box-sizing: content-box;
+}
+
+li a:focus svg, li a:hover svg,
+li a svg:hover {
+    background-color: #ffff89;
+}

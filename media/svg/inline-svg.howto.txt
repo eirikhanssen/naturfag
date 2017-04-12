@@ -1,0 +1,13 @@
+https://icomoon.io/#docs/inline-svg
+
+<svg class="icon icon-kort"><use xlink:href="naturfag-icons.svg#icon-kort"></use></svg>
+<svg class="icon icon-radio-unchecked"><use xlink:href="naturfag-icons.svg#icon-radio-unchecked"></use></svg>
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

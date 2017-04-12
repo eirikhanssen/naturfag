@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 	if($('#lang_select_form')) {
-
 		var primary_language = $('input[name=primary_language]:checked').attr('id');
 		var secondary_language = $('input[name=secondary_language]:checked').attr('id');
 		$('body').attr('data-secondary-lang', secondary_language.replace(/.+?_([^_]+)$/g,'$1'));

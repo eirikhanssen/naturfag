@@ -123,7 +123,7 @@ Vinden kan blåse frø med fnokk langt vekk.</p>
 	</div><!-- .col-->
 
 	<div class="col-xd-2 col-xs-2">
-		<?php theChapterMenu(0); ?>
+		<?php theChapterMenu($depth); ?>
 	</div><!-- .col-xd-4  -->
 </div><!-- .row -->
 
