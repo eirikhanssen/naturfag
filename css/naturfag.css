@@ -56,7 +56,7 @@ body.primary_lang_ti .audio_and_text.ti {
 
 #lang_select label:hover {
 	background: #324d89;
-	border-color: #7b7b7b;
+	border-color: #a3ffce;
     color: white;
 }
 
@@ -93,7 +93,20 @@ body.primary_lang_ti .audio_and_text.ti {
 }
 
 header {margin-bottom: 6em;}
-header h1 {margin:0; padding-top: .5em; padding-left: .5em; padding-bottom: .25em; position:absolute; top:0; width:100%; background: rgb(237, 237, 237); border-bottom: 1px solid lightgray;}
+header h1 {
+    margin:0; 
+    padding-top: .5em; 
+    padding-left: .5em; 
+    padding-bottom: .25em; 
+    position:absolute; 
+    top:0; width:100%; 
+    background: rgb(245, 245, 245);
+background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 76%, #e1e1e1 77%, #f6f6f6 100%);
+background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 76%,#e1e1e1 77%,#f6f6f6 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 76%,#e1e1e1 77%,#f6f6f6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+    border-bottom: 1px solid lightgray;
+}
 
 .nav-pills li {border:1px solid #b4b4b4;}
 /*snutter*/
@@ -338,22 +351,29 @@ ul.nav li {
     position: relative;
 }
 
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: white;
+}
 ul.nav li svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
-    left: 4px;
+    left: 10px;
     margin: 0;
 }
 
 /* test css */
 ul.nav li {border: none;}
-ul.nav li a {border: none; padding: 16px; padding-left: 52px; }
+ul.nav li + li {
+    border-top: 1px solid gray;
+    margin:0;
+}
+ul.nav li a {font-weight: bold; border: none; padding: 20px; padding-left: 60px; }
 li svg {
     color: black;
-    background-color: white;
+    background-color: #FEFFC4;
     border-radius: 8px;
     padding: 4px;
     border: 1px solid gray;
@@ -362,5 +382,80 @@ li svg {
 
 li a:focus svg, li a:hover svg,
 li a svg:hover {
-    background-color: #ffff89;
+    /*background-color: #ffff89;*/
+}
+
+body.snutter .menu-snutter svg,
+body.kviss .menu-kviss svg,
+body.kort .menu-kort svg,
+body.lang .menu-lang svg,
+body.ord .menu-ord svg,
+body.film .menu-film svg,
+body.let-og-finn .menu-let-og-finn svg {
+    /*color: black; background-color: #ffff89*/
+    color: #C3FF8F; background-color: black;
+}
+
+body.snutter .menu-snutter a:hover svg,
+body.kviss .menu-kviss a:hover svg,
+body.kort .menu-kort a:hover svg,
+body.lang .menu-lang a:hover svg,
+body.ord .menu-ord a:hover svg,
+body.film .menu-film a:hover svg,
+body.let-og-finn .menu-let-og-finn a:hover svg {
+    animation: none;
+}
+
+body.snutter .menu-snutter a,
+body.kviss .menu-kviss a,
+body.kort .menu-kort a,
+body.lang .menu-lang a,
+body.ord .menu-ord a,
+body.film .menu-film a,
+body.let-og-finn .menu-let-og-finn a {
+/*    color: white; background-color: #539f21;*/
+    color: black;
+    background: #C3FF8F;
+}
+
+.nav li a {
+background: #fafafa;
+    border-radius: 8px;
+    border-radius: 0;
+}
+
+.nav a svg {
+    
+}
+.nav a:hover svg,
+.nav a:focus svg{
+    animation: iconscale .2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes iconscale {
+    0% {z-index: 0; transform: translate(0,-50%) scale(1);}
+    1% {z-index: 10; transform: translate(0,-50%) scale(1);}
+    20% {z-index: 10; transform: translate(0,-50%) scale(0.9);}
+    100% {z-index: 10; transform: translate(-3%, -50%) scale(1.2);}
+}
+
+nav.activities {
+    position: fixed;
+    top:0;
+    right:0px;
+    border: 1px solid gray;
+    border-top: none;
+    border-right: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+@media all and (orientation:portrait) {
+    nav.activities .link-desc {
+        font-size:0;
+        right: 9999px;
+    }
+    nav.activities li a {
+        padding-left:40px;
+    }
 }

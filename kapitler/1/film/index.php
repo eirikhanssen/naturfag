@@ -3,7 +3,7 @@ include '../../../inc/functions.php';
 $title = "Filmer";
 $depth = 3;
 $h1 = $title;
-$pageClass = "snutter film kap-1";
+$pageClass = "film kap-1";
 ?>
 <?php theHeader($depth, $title, $h1, $pageClass); ?>
 

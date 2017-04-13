@@ -117,6 +117,7 @@ function getChapterMenu($depth) {
 	$chaptermenu = <<<EOF
 <!-- rootfolder: {$rootfolder} -->
 <!-- depth: {$depth} -->
+<nav class="activities">
 <ul class="nav nav-pills nav-stacked">
 
 <li role="presentation" class="menu-kort"><a href="../kort">
@@ -154,6 +155,7 @@ function getChapterMenu($depth) {
 		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-finn"></use>
 	</svg><span class="link-desc">Let og finn</span></a></li>
 </ul>
+</nav>
 EOF;
 	return $chaptermenu;
 }
