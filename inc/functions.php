@@ -120,40 +120,58 @@ function getChapterMenu($depth) {
 <nav class="activities">
 <ul class="nav nav-pills nav-stacked">
 
-<li role="presentation" class="menu-kort"><a href="../kort">
-	<svg class="icon icon-kort">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-kort"></use>
-	</svg><span class="link-desc">kort fortelling</a></span></li>
+<li role="presentation" class="menu-kort">
+	<a href="../kort">
+		<div class="iconholder"><svg class="icon icon-kort"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-kort"></use></svg></div>
+		<span class="link-desc two-lines">kort</span>
+		<span class="link-desc two-lines">fortelling</span>
+	</a>
+</li>
 
-<li role="presentation" class="menu-lang"><a href="../lang">
-	<svg class="icon icon-lang">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-lang"></use>
-	</svg><span class="link-desc">lang fortelling</span></a></li>
+<li role="presentation" class="menu-lang">
+	<a href="../lang">
+		<div class="iconholder"><svg class="icon icon-lang"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-lang"></use></svg></div>
+		<span class="link-desc two-lines">lang</span>
+		<span class="link-desc two-lines">fortelling</span>
+	</a>
+</li>
 
-<li role="presentation" class="menu-ord"><a href="../ord">
-	<svg class="icon icon-abc">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-abc"></use>
-	</svg><span class="link-desc">ord</span></a></li>
+<li role="presentation" class="menu-ord">
+	<a href="../ord">
+		<div class="iconholder"><svg class="icon icon-abc"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-abc"></use></svg></div>
+		<span class="link-desc">ord</span>
+	</a>
+</li>
 
-<li role="presentation" class="menu-kviss"><a href="../kviss">
-	<svg class="icon icon-kviss">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-kviss"></use>
-	</svg><span class="link-desc">kviss</span></a></li>
+<li role="presentation" class="menu-kviss">
+	<a href="../kviss">
+		<div class="iconholder"><svg class="icon icon-kviss"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-kviss"></use></svg></div>
+		<span class="link-desc">kviss</span>
+	</a>
+</li>
 
-<li role="presentation" class="menu-film"><a href="../film">
-	<svg class="icon icon-film">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-film"></use>
-		</svg><span class="link-desc">film</span></a></li>
+<li role="presentation" class="menu-film">
+	<a href="../film">
+		<div class="iconholder"><svg class="icon icon-film"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-film"></use></svg></div>
+		<span class="link-desc">film</span>
+	</a>
+</li>
 
-<li role="presentation" class="menu-snutter"><a href="../snutter">
-	<svg class="icon icon-snutt">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-snutt"></use>
-	</svg><span class="link-desc">snutter</span></a></li>
+<li role="presentation" class="menu-snutter">
+	<a href="../snutter">
+		<div class="iconholder"><svg class="icon icon-snutter"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-snutt"></use></svg></div>
+		<span class="link-desc">snutter</span>
+	</a>
+</li>
 
-<li role="presentation" class="menu-let-og-finn"><a href="../let-og-finn">
-	<svg class="icon icon-finn">
-		<use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-finn"></use>
-	</svg><span class="link-desc">Let og finn</span></a></li>
+<li role="presentation" class="menu-let-og-finn">
+	<a href="../let-og-finn">
+		<div class="iconholder"><svg class="icon icon-finn"><use xlink:href="{$rootfolder}media/svg/naturfag-icons.svg#icon-finn"></use></svg></div>
+		<span class="link-desc two-lines">let og</span>
+		<span class="link-desc two-lines">finn</span>
+	</a>
+</li>
+
 </ul>
 </nav>
 EOF;

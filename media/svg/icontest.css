@@ -1,0 +1,215 @@
+.iconholder {
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    padding: 0.25em;
+    border: 1px solid dodgerblue;
+    box-sizing: content-box;
+   position: absolute; 
+    left:.25em;
+    bottom: 0;
+    top: 0;
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
+    margin: auto;
+    line-height: 1em;
+    z-index: 1;
+}
+
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.icon-blad {color: sienna;}
+.icon-ertebelg {color: limegreen;}
+.icon-mark {color: saddlebrown;}
+.icon-spire {color: darkolivegreen;}
+.icon-blomst {color: orangered;}
+.icon-spredning {color: #b16b31;}
+.icon-ert {color: darkolivegreen;}
+.icon-romskip {color: #1b41b1;}
+
+nav {
+    font-family: sans-serif;
+}
+
+nav ul {
+    width: 14em;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+
+
+/* new menu css */
+
+nav li {
+    position: relative;
+    font-size: 2em;
+    border: none;
+    background-color: whitesmoke;
+}
+
+nav li+li {
+    border-top: 1px solid #414141;
+    margin: 0;
+}
+
+nav li a {
+    font-weight: normal;
+    border: none;
+    padding-left: 2.5em;
+    text-decoration: none;
+    line-height: 2em;
+    display: block;
+}
+
+nav li a:hover,
+nav li a:focus{
+    background-color: dodgerblue;
+    background: rgb(103,174,229); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(103,174,229,1) 0%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67aee5', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+    color: white;
+}
+
+body.snutter .menu-snutter svg,
+body.kviss .menu-kviss svg,
+body.kort .menu-kort svg,
+body.lang .menu-lang svg,
+body.ord .menu-ord svg,
+body.film .menu-film svg,
+body.let-og-finn .menu-let-og-finn svg {
+    color: #C3FF8F;
+    background-color: black;
+}
+
+body.snutter .menu-snutter a:hover svg,
+body.kviss .menu-kviss a:hover svg,
+body.kort .menu-kort a:hover svg,
+body.lang .menu-lang a:hover svg,
+body.ord .menu-ord a:hover svg,
+body.film .menu-film a:hover svg,
+body.let-og-finn .menu-let-og-finn a:hover svg {
+    animation: none;
+}
+
+body.snutter .menu-snutter a,
+body.kviss .menu-kviss a,
+body.kort .menu-kort a,
+body.lang .menu-lang a,
+body.ord .menu-ord a,
+body.film .menu-film a,
+body.let-og-finn .menu-let-og-finn a {
+    color: black;
+    background: #C3FF8F;
+}
+
+nav a {
+    background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    border-radius: 0;
+    color: black;
+}
+
+nav a svg {}
+
+nav a:hover .iconholder,
+nav a:focus .iconholder {
+    animation: iconscale .2s ease-in-out;
+    animation-fill-mode:both;
+    z-index: 1;
+}
+
+nav a:hover .iconholder::after,
+nav a:focus .iconholder::after {
+    content:"";
+    border: 1px solid white;
+    position: absolute;
+     top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: 0 0 5px #525252;
+    
+}
+
+@keyframes iconscale {
+    0% {
+        z-index: 0;
+        transform: scale(1);
+        
+    }
+    1% {
+        z-index: 10;
+        transform: scale(1);
+    }
+    20% {
+        z-index: 10;
+        transform:  scale(0.9);
+        
+    }
+    50% {
+        border-radius: 30%;
+
+    }
+    100% {
+        z-index: 10;
+        transform:scale(1.3);
+        border-color: #1ce06f;
+        background-color: white;
+        /*border: 2px solid blue;*/
+        border-width: 4px;
+        border-radius: 100%;
+    }
+}
+
+nav.activities {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #414141;
+    border-top: none;
+    border-right: none;
+    box-shadow: -2px 2px 5px #aaaaaa;
+}
+
+
+nav ul .link-desc {font-size: 0.75em;}
+
+@media all and (orientation:portrait) {
+    nav.activities .link-desc {
+        font-size: 0;
+        right: 9999px;
+    }
+    nav.activities li a {
+        padding-left: 40px;
+    }
+    nav ul {
+        width: 4.5em;
+        
+    }
+    .iconholder {
+        left: 0; right: 0;
+    }
+}
+
+@media all and (min-height:30em) {
+    nav.activities {
+        position: fixed;
+    }
+}
