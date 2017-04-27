@@ -69,12 +69,26 @@
             display: flex;
             flex-flow: row nowrap;
             justify-content: flex-start;
+            align-items: flex-start;
         }
         
         nav.chapter ul {
             background: rgba(0,255,255,0.5);
             list-style-type: none;
-            
+            margin:0;
+            padding: 0;
+        }
+        
+        .iconholder {
+            font-size: 2.7em;
+            width: 1em;
+            height: 1em;
+            padding: 0.1em;
+            flex-flow: 0 0 2em;
+            box-sizing: content-box;
+            border: 0px solid red;
+            background: white;
+            border-radius: 0.05em;
         }
         
         @media all and (min-width:70em) {
@@ -94,7 +108,10 @@
         }
         
         svg {
-            display: none;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentcolor;
         }
 
     </style>
