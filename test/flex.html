@@ -68,8 +68,8 @@
             flex: 0 0 auto;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: space-between;
+            align-items: stretch;
         }
         
         nav.chapter ul {
@@ -80,7 +80,8 @@
             display: flex;
             flex-flow: row wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            flex: 1 0 auto;
         }
         
         nav.chapter a {
@@ -88,15 +89,35 @@
             background: gray;
             flex: 0 0 auto;
             flex-flow: column nowrap;
+            align-items: center;
             margin: 1px;
         }
         
+        @media screen and (orientation:portrait){
+            .chapter .iconholder {align-self: center;
+                font-size: 8vw;
+            }
+            
+            nav.chapter a {
+                color: red;
+                flex: 1 1 5em !important;
+            }
+            
+        }
+        
+        @media screen {
+            nav.chapter .link-text {font-size: 0; visibility: hidden;}
+        }
+        
         @media screen and (orientation:landscape) {
+            .chapter .iconholder {align-self: center;
+                font-size: 8vh;
+            }
             nav.chapter ul {
                 flex-flow: column nowrap;
                 align-items: stretch;
             }
-            nav.chapter .link-text {font-size: 0; visibility: hidden;}
+            
         }
         
         .iconholder {
@@ -104,20 +125,30 @@
             width: 1em;
             height: 1em;
             padding: 0.1em;
-            flex-flow: 0 0 2em;
+            flex: 0 0 auto;
             box-sizing: content-box;
             border: 0px solid red;
             background: white;
             border-radius: 0.05em;
             align-self: flex-start;
-            margin: 0.25em;
+            margin: 0.125em;
         }
         
         .link-text {
-            align-self: flex-end;
+            align-self: center;
+            align-items: flex-start;
+            justify-content: space-around;
+            align-content: stretch;
+            text-align: center;
+            display: flex;
+            flex-flow: column nowrap;
+            /*white-space: pre;*/
+            flex: 0 0 auto;
         }
         
-        @media all and (min-width:70em) {
+        /*.link-text span {flex: 1 1 auto; background: violet;}*/
+        
+        @media all and (min-width:60em) {
             .flexr {
                 background: magenta;
                 /*padding-top: var(--space-lg); */
@@ -150,7 +181,7 @@
             display: inline-block;
             width: 1em;
             height: 1em;
-            fill: currentcolor;
+            fill: currentColor;
         }
 
     </style>
@@ -170,7 +201,7 @@
                     <a href="../kort">
                         <div class="iconholder"><svg class="icon icon-kort"><use xlink:href="../media/svg/naturfag-icons.svg#icon-kort"></use></svg></div>
                         <div class="link-text">
-                            <span class="link-desc two-lines">kort</span>
+                            <span class="link-desc two-lines">kort </span>
                             <span class="link-desc two-lines">fortelling</span>
                         </div>
                     </a>
@@ -180,7 +211,7 @@
                     <a href="../lang">
                         <div class="iconholder"><svg class="icon icon-lang"><use xlink:href="../media/svg/naturfag-icons.svg#icon-lang"></use></svg></div>
                         <div class="link-text">
-                            <span class="link-desc two-lines">lang</span>
+                            <span class="link-desc two-lines">lang </span>
                             <span class="link-desc two-lines">fortelling</span>
                         </div>
                     </a>
@@ -226,7 +257,7 @@
                     <a href="../let-og-finn">
                         <div class="iconholder"><svg class="icon icon-finn"><use xlink:href="../media/svg/naturfag-icons.svg#icon-finn"></use></svg></div>
                         <div class="link-text">
-                            <span class="link-desc two-lines">let og</span>
+                            <span class="link-desc two-lines">let og </span>
                             <span class="link-desc two-lines">finn</span>
                         </div>
                     </a>
