@@ -2,6 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .app {
@@ -21,17 +22,24 @@ body {
 }
 
 .iconholder {
-    font-size: 2.7em;
+	color: black;
+	background-color: white;
+	border: 1px solid dodgerblue;
+    font-size: 2.5em;
     width: 1em;
     height: 1em;
     padding: 0.1em;
     flex: 0 0 auto;
     box-sizing: content-box;
-    border: 0px solid red;
-    background: white;
     border-radius: 0.05em;
     align-self: flex-start;
     margin: 0.125em;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
 }
 
 .link-text {
@@ -42,38 +50,11 @@ body {
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
-    /*white-space: pre;*/
     flex: 0 0 auto;
+    position: relative;
 }
 
-@media screen and (orientation:portrait) {
-    .flexr {
-        flex-flow: column-reverse nowrap;
-    }
-}
 
-@media screen and (orientation:portrait) and (min-width:40em) {
-    nav.chapter .iconholder {
-        font-size: 3em;
-    }
-    nav.chapter a .link-text {
-        flex: 1 0 2em;
-        font-size: 1em;
-        visibility: visible;
-        padding: 0.5rem;
-        padding-top: 0;
-    }
-}
-
-@media screen and (orientation:portrait) and (min-width:60em) {
-    nav.chapter li a {
-        flex-flow: row nowrap;
-    }
-    nav.chapter a .link-text {
-        padding: 0.3rem;
-        padding-left: 0;
-    }
-}
 
 .flexr::after {
     content: '\00a0';
@@ -116,7 +97,7 @@ nav.chapter {
 }
 
 nav.chapter ul {
-    background: rgba(0, 255, 255, 0.5);
+    
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -128,12 +109,98 @@ nav.chapter ul {
 }
 
 nav.chapter a {
+	padding:0;
+	position: relative;
     display: flex;
-    background: gray;
     flex: 0 0 auto;
     flex-flow: column nowrap;
     align-items: center;
+    text-decoration: none;
     margin: 1px;
+    background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    border-radius: 0;
+    color: black;
+    min-width:4rem;
+    min-height:4rem;
+    
+}
+
+nav.chapter li a:hover,
+nav.chapter li a:focus{
+    background-color: dodgerblue;
+    background: rgb(103,174,229); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(103,174,229,1) 0%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67aee5', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+    color: white;
+}
+
+
+nav.chapter a:hover .iconholder,
+nav.chapter a:focus .iconholder {
+    animation: iconscale .2s ease-in-out;
+    animation-fill-mode:both;
+    z-index: 1;
+}
+
+nav.chapter a:hover .iconholder::after,
+nav.chapter a:focus .iconholder::after {
+    content:"";
+    border: 1px solid white;
+    position: absolute;
+     top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: 0 0 5px #525252;
+    
+}
+
+@keyframes iconscale {
+    0% {
+        z-index: 0;
+        transform: scale(1);
+        
+    }
+    1% {
+        z-index: 10;
+        transform: scale(1);
+    }
+    20% {
+        z-index: 10;
+        transform:  scale(0.8);
+        
+    }
+    50% {
+        border-radius: 30%;
+
+    }
+    100% {
+        z-index: 10;
+        transform:scale(1.1);
+        border-color: #1ce06f;
+        background-color: white;
+        /*border: 2px solid blue;*/
+        border-width: 4px;
+        border-radius: 100%;
+    }
+}
+
+@keyframes slider {
+	0% {
+		left:0;
+		right:0;
+	}
+	100% {
+		left: .25rem;
+	}
 }
 
 .chapter .iconholder {
@@ -145,8 +212,8 @@ nav.chapter a {
         align-self: flex-start;
     }
     nav.chapter a {
-        color: red;
-        flex: 1 1 5em !important;
+        flex: 1 1 5em;
+        flex-flow: column nowrap;
     }
 }
 
@@ -163,15 +230,14 @@ nav.chapter a {
         font-size: 8vh;
         font-size: 3em;
     }
+    nav.chapter a {
+    	min-width: 5rem;
+    	min-height: 5rem;
+    }
+    nav.chapter .link-text {margin-right: .5rem;}
     nav.chapter ul {
         flex-flow: column nowrap;
         align-items: stretch;
-    }
-}
-
-@media screen and (orientation:portrait) {
-    nav.chapter a {
-        flex-flow: column nowrap;
     }
 }
 
@@ -192,6 +258,8 @@ nav.chapter a {
     nav.chapter a {
         align-items: flex-start;
         flex-flow: row nowrap;
+        padding:0;
+        padding-left: 4rem;
     }
     nav.chapter li + li {
         margin-top: 1px;
@@ -199,16 +267,118 @@ nav.chapter a {
     nav.chapter .link-text {
         visibility: visible;
         font-size: 1em;
-        background: yellow;
+        
         align-self: center;
         padding: 0.3rem;
         padding-left: 0;
+        margin-left: 1rem;
     }
+    .iconholder {margin-left: .5rem;}
+    nav.chapter a:focus .link-text,
+	nav.chapter a:hover .link-text {
+		animation: slider .3s ease-in-out;
+    	animation-fill-mode:forwards;
+    	z-index: 1;
+}
 }
 
-svg {
+.icon {
     display: inline-block;
     width: 1em;
     height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
     fill: currentColor;
+}
+
+/* ==========================
+	current page in menu	
+   ========================== */	
+
+.icon-blad {color: sienna;}
+.icon-ertebelg {color: limegreen;}
+.icon-mark {color: saddlebrown;}
+.icon-spire {color: darkolivegreen;}
+.icon-blomst {color: orangered;}
+.icon-spredning {color: #b16b31;}
+.icon-ert {color: darkolivegreen;}
+.icon-romskip {color: #1b41b1;}
+.icon-carrot {color: #E65400;}
+
+body.snutter .menu-snutter svg,
+body.kviss .menu-kviss svg,
+body.kort .menu-kort svg,
+body.lang .menu-lang svg,
+body.ord .menu-ord svg,
+body.film .menu-film svg,
+body.let-og-finn .menu-let-og-finn svg {
+    color: #C3FF8F;
+    background-color: black;
+}
+
+body.snutter .menu-snutter a:hover svg,
+body.kviss .menu-kviss a:hover svg,
+body.kort .menu-kort a:hover svg,
+body.lang .menu-lang a:hover svg,
+body.ord .menu-ord a:hover svg,
+body.film .menu-film a:hover svg,
+body.let-og-finn .menu-let-og-finn a:hover svg {
+    animation: none;
+}
+
+body.snutter .menu-snutter a,
+body.kviss .menu-kviss a,
+body.kort .menu-kort a,
+body.lang .menu-lang a,
+body.ord .menu-ord a,
+body.film .menu-film a,
+body.let-og-finn .menu-let-og-finn a {
+    color: black;
+    background: #C3FF8F;
+}
+
+
+@media screen and (orientation:portrait) {
+    .flexr {
+        flex-flow: column-reverse nowrap;
+    }
+}
+
+@media screen and (orientation:portrait) and (min-width:40em) {
+    nav.chapter a {
+    	padding-top: 1.3rem;
+    	flex-flow: row nowrap;
+    	flex: 0 1 7rem;
+    	min-height: 5rem;
+    	min-width: 5rem;
+    }
+    
+    .iconholder {margin-top: .5rem;}
+    nav.chapter .iconholder {
+        font-size: 3em;
+    }
+    nav.chapter a .link-text {
+        flex: 1 0 2em;
+        font-size: 1em;
+        visibility: visible;
+        padding: 0.25rem;
+        padding-top: 0;
+        align-self: flex-end;
+        text-align: center;
+		flex-flow: row nowrap;       
+    }
+    nav.chapter .link-text span+span:before {
+	    content: '\00a0';
+    /* &nbsp; */
+    }
+
+}
+
+@media screen and (orientation:portrait) and (min-width:60em) {
+    nav.chapter li a {
+        
+    }
+    nav.chapter a .link-text {
+        padding: 0.3rem;
+    }
 }
