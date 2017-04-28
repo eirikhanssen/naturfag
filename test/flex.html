@@ -26,9 +26,54 @@
             flex-flow: row nowrap;
         }
         
+        .iconholder {
+            font-size: 2.7em;
+            width: 1em;
+            height: 1em;
+            padding: 0.1em;
+            flex: 0 0 auto;
+            box-sizing: content-box;
+            border: 0px solid red;
+            background: white;
+            border-radius: 0.05em;
+            align-self: flex-start;
+            margin: 0.125em;
+        }
+        
+        .link-text {
+            align-self: center;
+            align-items: flex-start;
+            justify-content: space-around;
+            align-content: stretch;
+            text-align: center;
+            display: flex;
+            flex-flow: column nowrap;
+            /*white-space: pre;*/
+            flex: 0 0 auto;
+        }
+
         @media screen and (orientation:portrait){
             .flexr {
                 flex-flow: column-reverse nowrap;
+            }
+        }
+
+        @media screen and (orientation:portrait) and (min-width:40em) {
+            nav.chapter .iconholder {font-size: 3em;}
+            nav.chapter a .link-text {
+                flex: 1 0 2em; font-size: 1em; visibility: visible; 
+                padding: 0.5rem;
+                padding-top: 0;
+            }
+        }
+
+        @media screen and (orientation:portrait) and (min-width:60em) {
+            nav.chapter li a {
+                flex-flow: row nowrap;
+            }
+            nav.chapter a .link-text {
+                padding: 0.3rem;
+                padding-left: 0;
             }
         }
         
@@ -93,9 +138,14 @@
             margin: 1px;
         }
         
+        .chapter .iconholder {
+            font-size: 8vw;
+        }
+
         @media screen and (orientation:portrait){
-            .chapter .iconholder {align-self: center;
-                font-size: 8vw;
+            .chapter .iconholder {
+                align-self: flex-start;
+                
             }
             
             nav.chapter a {
@@ -112,6 +162,7 @@
         @media screen and (orientation:landscape) {
             .chapter .iconholder {align-self: center;
                 font-size: 8vh;
+                font-size: 3em;
             }
             nav.chapter ul {
                 flex-flow: column nowrap;
@@ -120,35 +171,15 @@
             
         }
         
-        .iconholder {
-            font-size: 2.7em;
-            width: 1em;
-            height: 1em;
-            padding: 0.1em;
-            flex: 0 0 auto;
-            box-sizing: content-box;
-            border: 0px solid red;
-            background: white;
-            border-radius: 0.05em;
-            align-self: flex-start;
-            margin: 0.125em;
+        
+        @media screen and (orientation:portrait) {
+            nav.chapter a {
+                flex-flow: column nowrap;
+            }
         }
         
-        .link-text {
-            align-self: center;
-            align-items: flex-start;
-            justify-content: space-around;
-            align-content: stretch;
-            text-align: center;
-            display: flex;
-            flex-flow: column nowrap;
-            /*white-space: pre;*/
-            flex: 0 0 auto;
-        }
         
-        /*.link-text span {flex: 1 1 auto; background: violet;}*/
-        
-        @media all and (min-width:60em) {
+        @media all and (orientation:landscape) and (min-width:60em) {
             .flexr {
                 background: magenta;
                 /*padding-top: var(--space-lg); */
@@ -173,10 +204,11 @@
                 font-size: 1em;
                 background: yellow;
                 align-self: center;
+                padding: 0.3rem; padding-left: 0;
             }
             
         }
-        
+
         svg {
             display: inline-block;
             width: 1em;
