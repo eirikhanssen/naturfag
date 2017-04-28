@@ -1,3 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+nav {margin: 0; padding: 0; flex: 1 0 auto; display: flex;}
+nav ul {margin: 0; padding: 0; flex: 1 0 auto; display: flex; list-style-type: none; background: cyan; flex-flow: column wrap;}
+
+nav li {
+    flex: 0 0 auto;
+    width:auto;
+    position: relative;
+    font-size: 2em;
+    border: none;
+    background-color: whitesmoke;
+    width: 12em;
+}
+
+nav li+li {
+    border-top: 1px solid #414141;
+    margin: 0;
+}
+
+nav li a {
+    font-weight: normal;
+    border: none;
+    padding-left: 2.5em;
+    text-decoration: none;
+    line-height: 2em;
+    display: block;
+}
+
+nav li a:hover,
+nav li a:focus{
+    background-color: dodgerblue;
+    background: rgb(103,174,229); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(103,174,229,1) 0%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67aee5', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+    color: white;
+}
+
 .iconholder {
     color: black;
     background-color: white;
@@ -5,7 +51,7 @@
     padding: 0.25em;
     border: 1px solid dodgerblue;
     box-sizing: content-box;
-   position: absolute; 
+    position: absolute; 
     left:.25em;
     bottom: 0;
     top: 0;
@@ -35,52 +81,7 @@
 .icon-spredning {color: #b16b31;}
 .icon-ert {color: darkolivegreen;}
 .icon-romskip {color: #1b41b1;}
-
-nav {
-    font-family: sans-serif;
-}
-
-nav ul {
-    width: 14em;
-    list-style-type: none;
-    margin:0;
-    padding: 0;
-}
-
-
-/* new menu css */
-
-nav li {
-    position: relative;
-    font-size: 2em;
-    border: none;
-    background-color: whitesmoke;
-}
-
-nav li+li {
-    border-top: 1px solid #414141;
-    margin: 0;
-}
-
-nav li a {
-    font-weight: normal;
-    border: none;
-    padding-left: 2.5em;
-    text-decoration: none;
-    line-height: 2em;
-    display: block;
-}
-
-nav li a:hover,
-nav li a:focus{
-    background-color: dodgerblue;
-    background: rgb(103,174,229); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(103,174,229,1) 0%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(103,174,229,1) 0%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67aee5', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
-    color: white;
-}
+.icon-carrot {color: #E65400;}
 
 body.snutter .menu-snutter svg,
 body.kviss .menu-kviss svg,
@@ -178,38 +179,5 @@ nav a:focus .iconholder::after {
     }
 }
 
-nav.activities {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    border: 1px solid #414141;
-    border-top: none;
-    border-right: none;
-    box-shadow: -2px 2px 5px #aaaaaa;
-}
-
-
 nav ul .link-desc {font-size: 0.75em;}
 
-@media all and (orientation:portrait) {
-    nav.activities .link-desc {
-        font-size: 0;
-        right: 9999px;
-    }
-    nav.activities li a {
-        padding-left: 40px;
-    }
-    nav ul {
-        width: 4.5em;
-        
-    }
-    .iconholder {
-        left: 0; right: 0;
-    }
-}
-
-@media all and (min-height:30em) {
-    nav.activities {
-        position: fixed;
-    }
-}
